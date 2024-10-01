@@ -11,6 +11,11 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "main-color": "var(--main-color)",
+        "secondary-color": "var(--secondary-color)",
+        "stroke-blue-color": "var(--stroke-blue-color)",
+        "stroke-color": "var(--stroke-color)",
+        "bg-gray": "var(--bg-gray)",
       },
     },
   },

@@ -25,7 +25,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </head>
       <body className={`${manrope.className} bg-background text-foreground`}>
         <Navigation />
-        <main className="container mx-auto py-8">
+        <main className="wrapper mx-auto py-8">
           {children}
         </main>
         <Footer />

@@ -15,8 +15,8 @@ const Navigation = () => {
 	}
 
 	return (
-		<nav className='bg-[rgba(15, 15, 16, 0.64)] text-white'>
-			<div className='container mx-auto flex justify-between items-center py-4  '>
+		<nav className='bg-[rgba(15, 15, 16, 0.64)] text-white fixed top-0 w-full z-10'>
+			<div className='wrapper mx-auto flex justify-between items-center py-4 pl-4'>
         {/* Logo */}
 				<Link
 					href='/'
@@ -36,7 +36,7 @@ const Navigation = () => {
 				</button>
 
 				{/* desktop menu */}
-				<ul className={`text-base hidden lg:flex`}>
+				<ul className={`text-base hidden lg:flex pr-4`}>
 					<li>
 						<Link href='/' className='p-5 hover:text-secondary-color'>
 							Usługi
@@ -73,51 +73,29 @@ const Navigation = () => {
 			</div>
 
 			{/* mobile menu */}
-			
-				<div className={`lg:hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-screen' : 'max-h-0'} overflow-hidden bg-bg-gray container mx-auto`}>
-					<ul className=' mx-autoflex flex-col pl-4 text-base'>
-						<li>
-							<Link
-								href='/'
-								className='block py-6  text-left hover:text-secondary-color'
-							>
-								Usługi
-							</Link>
-						</li>
-						<li>
-							<Link
-								href='/oferta'
-								className='block py-6 text-left hover:text-secondary-color'
-							>
-								Oferta
-							</Link>
-						</li>
-						<li>
-							<Link
-								href='/galeria'
-								className='block py-6 text-left hover:text-secondary-color'
-							>
-								Galeria
-							</Link>
-						</li>
-						<li>
-							<Link
-								href='/opinie'
-								className='block py-6 text-left hover:text-secondary-color'
-							>
-								Opinie
-							</Link>
-						</li>
-						<li>
-							<Link
-								href='/kontakt'
-								className='block py-6 text-left text-secondary-color'
-							>
-								Kontakt
-							</Link>
-						</li>
-					</ul>
-				</div>
+      <div
+        className={`lg:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen' : 'max-h-0 overflow-hidden'} w-full bg-bg-gray`}
+      >
+        <div className='wrapper mx-auto'>
+          <ul className='flex flex-col text-base pl-4'>
+            <li>
+              <Link href='/' className='block py-6 text-left hover:text-secondary-color'>Usługi</Link>
+            </li>
+            <li>
+              <Link href='/oferta' className='block py-6 text-left hover:text-secondary-color'>Oferta</Link>
+            </li>
+            <li>
+              <Link href='/galeria' className='block py-6 text-left hover:text-secondary-color'>Galeria</Link>
+            </li>
+            <li>
+              <Link href='/opinie' className='block py-6 text-left hover:text-secondary-color'>Opinie</Link>
+            </li>
+            <li>
+              <Link href='/kontakt' className='block py-6 text-left text-secondary-color'>Kontakt</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
 			
 		</nav>
 	)

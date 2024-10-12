@@ -1,29 +1,114 @@
-import Link from 'next/link'
+'use client'
 import Image from 'next/image'
+import Logo from '../../public/Logo.png'
+import burgerMenuIcon from '../../public/burgerMenuIcon.svg'
+
+import { useState } from 'react'
+import Link from 'next/link'
 
 const Navigation = () => {
-  return (
-    <nav className="bg-white shadow-md">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center">
-          <Image src="/logo.png" alt="MyCiśnieniem Logo" width={50} height={50} />
-          <span className="ml-2 text-xl font-bold text-blue-600">MyCiśnieniem</span>
-        </Link>
-        <div className="hidden md:flex space-x-4">
-          <Link href="/" className="text-gray-600 hover:text-blue-600">Strona główna</Link>
-          <Link href="/o-nas" className="text-gray-600 hover:text-blue-600">O nas</Link>
-          <Link href="/uslugi" className="text-gray-600 hover:text-blue-600">Usługi</Link>
-          <Link href="/galeria" className="text-gray-600 hover:text-blue-600">Galeria</Link>
-          <Link href="/kontakt" className="text-gray-600 hover:text-blue-600">Kontakt</Link>
-        </div>
-        <button className="md:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-    </nav>
-  )
+	const [isOpen, setIsOpen] = useState(false)
+
+	const toggleMenu = () => {
+		setIsOpen((isOpen) => !isOpen)
+	}
+
+	return (
+		<nav className='bg-[rgba(15, 15, 16, 0.64)] text-white'>
+			<div className='container mx-auto flex justify-between items-center py-4  '>
+				<Link href='/' className='w-[140px] h-[70px] lg:w-[240px] lg:h-[120px]'>
+						<Image src={Logo} alt='Logo' width={240} height={120} />
+				</Link>
+
+				{/* Ikona menu dla urządzeń mobilnych */}
+				<button onClick={toggleMenu} className='lg:hidden p-4'>
+					<Image src={burgerMenuIcon} alt='Menu' width={44} height={15} ></Image>
+					
+				</button>
+
+				{/* Menu na większe ekrany */}
+				<ul className={`hidden space-x-6 lg:flex lg:space-x-8`}>
+					<li>
+						<Link href='/' className='hover:text-secondary-color'>
+							Usługi
+						</Link>
+					</li>
+					<li>
+						<Link
+							href='/oferta'
+							className='hover:text-secondary-color'
+						>
+							Oferta
+						</Link>
+					</li>
+					<li>
+						<Link
+							href='/galeria'
+							className='hover:text-secondary-color'
+						>
+							Galeria
+						</Link>
+					</li>
+					<li>
+						<Link
+							href='/kontakt'
+							className='hover:text-secondary-color'
+						>
+							Kontakt
+						</Link>
+					</li>
+				</ul>
+			</div>
+
+			{/* Menu rozwijane dla urządzeń mobilnych */}
+			{isOpen && (
+				<div className='lg:hidden bg-bg-gray'>
+					<ul className='flex flex-col p-4 text-base'>
+						<li>
+							<Link
+								href='/'
+								className='block py-6  text-left hover:text-secondary-color'
+							>
+								Usługi
+							</Link>
+						</li>
+						<li>
+							<Link
+								href='/oferta'
+								className='block py-6 text-left hover:text-secondary-color'
+							>
+								Oferta
+							</Link>
+						</li>
+						<li>
+							<Link
+								href='/galeria'
+								className='block py-6 text-left hover:text-secondary-color'
+							>
+								Galeria
+							</Link>
+						</li>
+						<li>
+							<Link
+								href='/opinie'
+								className='block py-6 text-left hover:text-secondary-color'
+							>
+								Opinie
+							</Link>
+						</li>
+						<li>
+							<Link
+								href='/kontakt'
+								className='block py-6 text-left text-secondary-color'
+							>
+								Kontakt
+							</Link>
+						</li>
+					</ul>
+				</div>
+			)}
+		</nav>
+	)
 }
 
 export default Navigation

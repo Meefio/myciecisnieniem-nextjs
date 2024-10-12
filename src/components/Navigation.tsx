@@ -17,6 +17,7 @@ const Navigation = () => {
 	return (
 		<nav className='bg-[rgba(15, 15, 16, 0.64)] text-white'>
 			<div className='container mx-auto flex justify-between items-center py-4  '>
+        {/* Logo */}
 				<Link
 					href='/'
 					className='w-[140px] h-[70px] lg:w-[240px] lg:h-[120px]'
@@ -24,7 +25,7 @@ const Navigation = () => {
 					<Image src={Logo} alt='Logo' width={240} height={120} />
 				</Link>
 
-				{/* Ikona menu dla urządzeń mobilnych */}
+				{/* mobile icon */}
 				<button onClick={toggleMenu} className='lg:hidden p-4'>
 					<Image
 						src={burgerMenuIcon}
@@ -34,7 +35,7 @@ const Navigation = () => {
 					></Image>
 				</button>
 
-				{/* Menu na większe ekrany */}
+				{/* desktop menu */}
 				<ul className={`text-base hidden lg:flex`}>
 					<li>
 						<Link href='/' className='p-5 hover:text-secondary-color'>
@@ -71,10 +72,10 @@ const Navigation = () => {
 				</ul>
 			</div>
 
-			{/* Menu rozwijane dla urządzeń mobilnych */}
-			{isOpen && (
-				<div className='lg:hidden bg-bg-gray'>
-					<ul className='flex flex-col p-4 text-base'>
+			{/* mobile menu */}
+			
+				<div className={`lg:hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-screen' : 'max-h-0'} overflow-hidden bg-bg-gray container mx-auto`}>
+					<ul className=' mx-autoflex flex-col pl-4 text-base'>
 						<li>
 							<Link
 								href='/'
@@ -117,7 +118,7 @@ const Navigation = () => {
 						</li>
 					</ul>
 				</div>
-			)}
+			
 		</nav>
 	)
 }

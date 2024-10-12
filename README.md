@@ -1,6 +1,8 @@
 I'm rewriting website myciecisnieniem.pl from Webflow to next.js.
 
-Currently this website is standing on Vercel: 
+Currently this website stands on Vercel: 
+
+https://myciecisnieniem-nextjs-8rbw2azrj-michals-projects-8d2913d0.vercel.app/
 
 ## Getting Started
 

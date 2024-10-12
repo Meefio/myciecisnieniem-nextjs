@@ -17,6 +17,12 @@ const config: Config = {
         "stroke-color": "var(--stroke-color)",
         "bg-gray": "var(--bg-gray)",
       },
+      backgroundImage: {
+        'at-sign': "url('/at-sign.png')",
+        'phone-icon-primary': "url('/phone-icon--primary-color.png')",
+        'phone-icon-secondary': "url('/phone-icon--secondary-color.png')",
+        'location-icon': "url('/location-icon.png')",
+      }
     },
   },
   plugins: [],

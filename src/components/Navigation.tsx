@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import Logo from '../../public/Logo.png'
+import logo from '../../public/Logo.png'
 import burgerMenuIcon from '../../public/burgerMenuIcon.svg'
 import NavBtn from './NavBtn'
 
@@ -15,14 +15,14 @@ const Navigation = () => {
 	}
 
 	return (
-		<nav className='bg-[rgba(15, 15, 16, 0.64)] text-white fixed top-0 w-full z-10'>
+		<nav className='bg-[rgba(15, 15, 16, 0.64)] text-white fixed top-0 w-full z-10 mt-[40px]'>
 			<div className='wrapper mx-auto flex justify-between items-center py-4 pl-4'>
         {/* Logo */}
 				<Link
 					href='/'
-					className='w-[140px] h-[70px] lg:w-[240px] lg:h-[120px]'
+					className='w-[140px] h-[70px] lg:w-[240px] lg:h-[120px] -ml-[6px]'
 				>
-					<Image src={Logo} alt='Logo' width={240} height={120} />
+					<Image src={logo} alt='Logo' width={240} height={120} />
 				</Link>
 
 				{/* mobile icon */}
@@ -36,16 +36,16 @@ const Navigation = () => {
 				</button>
 
 				{/* desktop menu */}
-				<ul className={`text-base hidden lg:flex pr-4`}>
+				<ul className={`text-base hidden lg:flex`}>
 					<li>
-						<Link href='/' className='p-5 hover:text-secondary-color'>
+						<Link href='/' className='p-5 hover:text-secondary-color transition-colors duration-300'>
 							Usługi
 						</Link>
 					</li>
 					<li>
 						<Link
 							href='/oferta'
-							className='p-5 hover:text-secondary-color'
+							className='p-5 hover:text-secondary-color transition-colors '
 						>
 							Oferta
 						</Link>
@@ -53,7 +53,7 @@ const Navigation = () => {
 					<li>
 						<Link
 							href='/galeria'
-							className='p-5 hover:text-secondary-color'
+							className='p-5 hover:text-secondary-color transition-colors '
 						>
 							Galeria
 						</Link>
@@ -61,7 +61,7 @@ const Navigation = () => {
 					<li>
 						<Link
 							href='/opinie'
-							className='p-5 hover:text-secondary-color'
+							className='p-5 hover:text-secondary-color transition-colors '
 						>
 							Opinie
 						</Link>
@@ -77,7 +77,7 @@ const Navigation = () => {
         className={`lg:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen' : 'max-h-0 overflow-hidden'} w-full bg-bg-gray`}
       >
         <div className='wrapper mx-auto'>
-          <ul className='flex flex-col text-base pl-4'>
+          <ul className='flex flex-col text-base '>
             <li>
               <Link href='/' className='block py-6 text-left hover:text-secondary-color'>Usługi</Link>
             </li>

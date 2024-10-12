@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Logo from '../../public/Logo.png'
 import burgerMenuIcon from '../../public/burgerMenuIcon.svg'
+import NavBtn from './NavBtn'
 
 import { useState } from 'react'
 import Link from 'next/link'
@@ -16,27 +17,34 @@ const Navigation = () => {
 	return (
 		<nav className='bg-[rgba(15, 15, 16, 0.64)] text-white'>
 			<div className='container mx-auto flex justify-between items-center py-4  '>
-				<Link href='/' className='w-[140px] h-[70px] lg:w-[240px] lg:h-[120px]'>
-						<Image src={Logo} alt='Logo' width={240} height={120} />
+				<Link
+					href='/'
+					className='w-[140px] h-[70px] lg:w-[240px] lg:h-[120px]'
+				>
+					<Image src={Logo} alt='Logo' width={240} height={120} />
 				</Link>
 
 				{/* Ikona menu dla urządzeń mobilnych */}
 				<button onClick={toggleMenu} className='lg:hidden p-4'>
-					<Image src={burgerMenuIcon} alt='Menu' width={44} height={15} ></Image>
-					
+					<Image
+						src={burgerMenuIcon}
+						alt='Menu'
+						width={44}
+						height={15}
+					></Image>
 				</button>
 
 				{/* Menu na większe ekrany */}
-				<ul className={`hidden space-x-6 lg:flex lg:space-x-8`}>
+				<ul className={`text-base hidden lg:flex`}>
 					<li>
-						<Link href='/' className='hover:text-secondary-color'>
+						<Link href='/' className='p-5 hover:text-secondary-color'>
 							Usługi
 						</Link>
 					</li>
 					<li>
 						<Link
 							href='/oferta'
-							className='hover:text-secondary-color'
+							className='p-5 hover:text-secondary-color'
 						>
 							Oferta
 						</Link>
@@ -44,18 +52,21 @@ const Navigation = () => {
 					<li>
 						<Link
 							href='/galeria'
-							className='hover:text-secondary-color'
+							className='p-5 hover:text-secondary-color'
 						>
 							Galeria
 						</Link>
 					</li>
 					<li>
 						<Link
-							href='/kontakt'
-							className='hover:text-secondary-color'
+							href='/opinie'
+							className='p-5 hover:text-secondary-color'
 						>
-							Kontakt
+							Opinie
 						</Link>
+					</li>
+					<li className='ml-[2.5rem]'>
+						<NavBtn>Kontakt</NavBtn>
 					</li>
 				</ul>
 			</div>

@@ -2,7 +2,7 @@ I'm rewriting website myciecisnieniem.pl from Webflow to next.js.
 
 Currently this website stands on Vercel: 
 
-https://myciecisnieniem-nextjs-8rbw2azrj-michals-projects-8d2913d0.vercel.app/
+https://myciecisnieniem-nextjs.vercel.app
 
 ## Getting Started
 
@@ -13,13 +13,3 @@ pnpm dev
 
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

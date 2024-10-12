@@ -24,15 +24,14 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
 	return (
 		<html lang='pl'>
-			<head></head>
 			<body
 				className={`${manrope.className} bg-background text-foreground`}
 			>
 				<header>
-          <Banner />
+					<Banner />
 					<Navigation />
 				</header>
-				<main className='wrapper mx-auto py-8 h-screen'>{children}</main>
+				{children}
 				<Footer />
 			</body>
 		</html>

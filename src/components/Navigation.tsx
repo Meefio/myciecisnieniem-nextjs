@@ -26,7 +26,7 @@ const Navigation = () => {
 				</Link>
 
 				{/* mobile icon */}
-				<button onClick={toggleMenu} className='lg:hidden p-4'>
+				<button onClick={toggleMenu} className='lg:hidden p-4 pr-0'>
 					<Image
 						src={burgerMenuIcon}
 						alt='Menu'

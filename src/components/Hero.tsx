@@ -33,13 +33,13 @@ const Hero = () => {
 			</div>
 			<Image
 				src={hero}
-				width={1080}
-				height={949}
+				width={415}
+				height={365}
 				alt='Pracownik myjący elewację'
-				className='max-w-[30vh] mx-auto my-6 lg:hidden'
+				className='mx-auto my-6 lg:hidden'
 			/>
 			<div className='flex flex-col justify-center items-center space-y-4'>
-				<p className='max-w-[70%] mx-auto text-xl text-center lg:hidden'>
+				<p className='max-w-[70%] mx-auto text-base text-center lg:hidden'>
 					Kompleksowe czyszczenie i impregnacja powierzchni.
 					<br /> Sprawdź, jak przywrócimy blask Twojego otoczenia!
 				</p>

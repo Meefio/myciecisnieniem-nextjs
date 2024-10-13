@@ -4,7 +4,7 @@ import hero from '../../public/hero-image.png'
 import googleRevievs from '../../public/GoogleReviews.png'
 import { HeroCompare } from './HeroCompare'
 import HeroButton from './HeroButton'
-import { FlipWords } from "./ui/flip-words";
+import { FlipWords } from './ui/flip-words'
 
 const Hero = () => {
 	return (
@@ -12,9 +12,19 @@ const Hero = () => {
 			<div className='flex justify-center items-center mt-16 lg:mt-48'>
 				<div className='space-y-6'>
 					<h1 className='text-center m-auto lg:text-left'>
-						Profesjonalne mycie <br />
-                  
-						<FlipWords className='text-main-color' words={['kostki brukowej', 'kostki granitowej', 'elewacji', 'dachu', 'fasady']} />
+						Profesjonalne mycie ciśnieniem{' '}
+						<span>
+							<FlipWords
+								className='text-main-color'
+								words={[
+									'kostki brukowej',
+									'kostki granitowej',
+									'elewacji',
+									'dachu',
+									'fasady',
+								]}
+							/>
+						</span>
 					</h1>
 					<p className='hidden lg:block max-w-[70%] text-xl'>
 						Kompleksowe czyszczenie i impregnacja powierzchni.
@@ -31,15 +41,16 @@ const Hero = () => {
 						className='hidden lg:block'
 					/>
 				</div>
-				<HeroCompare />
+				<HeroCompare classes='hidden lg:flex' />
 			</div>
-			<Image
+			<HeroCompare classes='block m-auto lg:hidden' />
+			{/* <Image
 				src={hero}
 				width={415}
 				height={365}
 				alt='Pracownik myjący elewację'
 				className='max-w-[80%] mx-auto my-6 lg:hidden'
-			/>
+			/> */}
 			<div className='flex flex-col justify-center items-center space-y-4'>
 				<p className='mx-auto text-sm text-center lg:hidden mt-4'>
 					Kompleksowe czyszczenie i impregnacja powierzchni.

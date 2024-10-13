@@ -4,9 +4,9 @@ import { Compare } from "@/components/ui/compare";
 
 
 
-export function HeroCompare() {
+export function HeroCompare({classes}: {classes?: string}) {
   return (
-    <div className="hidden w-[80%] lg:flex p-4 border rounded-3xl dark:bg-neutral-900 bg-neutral-100  border-neutral-200 dark:border-neutral-800 px-4">
+    <div className={`w-[80%] lg:flex p-4 border rounded-3xl dark:bg-neutral-900 bg-neutral-100  border-neutral-200 dark:border-neutral-800 px-4 ${classes}`}>
       <Compare
         firstImage='/hero-compare-after.jpg'
         secondImage="/hero-compare-before.jpg"

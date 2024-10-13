@@ -4,15 +4,17 @@ import hero from '../../public/hero-image.png'
 import googleRevievs from '../../public/GoogleReviews.png'
 import { HeroCompare } from './HeroCompare'
 import HeroButton from './HeroButton'
+import { FlipWords } from "./ui/flip-words";
 
 const Hero = () => {
 	return (
 		<section>
-			<div className='flex justify-center items-center mt-24 lg:mt-48'>
+			<div className='flex justify-center items-center mt-16 lg:mt-48'>
 				<div className='space-y-6'>
 					<h1 className='text-center m-auto lg:text-left'>
 						Profesjonalne mycie <br />
-						<span className='text-main-color'>kostki brukowej</span>
+                  
+						<FlipWords className='text-main-color' words={['kostki brukowej', 'kostki granitowej', 'elewacji', 'dachu', 'fasady']} />
 					</h1>
 					<p className='hidden lg:block max-w-[70%] text-xl'>
 						Kompleksowe czyszczenie i impregnacja powierzchni.
@@ -36,10 +38,10 @@ const Hero = () => {
 				width={415}
 				height={365}
 				alt='Pracownik myjący elewację'
-				className='mx-auto my-6 lg:hidden'
+				className='max-w-[80%] mx-auto my-6 lg:hidden'
 			/>
 			<div className='flex flex-col justify-center items-center space-y-4'>
-				<p className='max-w-[70%] mx-auto text-base text-center lg:hidden'>
+				<p className='mx-auto text-sm text-center lg:hidden mt-4'>
 					Kompleksowe czyszczenie i impregnacja powierzchni.
 					<br /> Sprawdź, jak przywrócimy blask Twojego otoczenia!
 				</p>
@@ -47,8 +49,8 @@ const Hero = () => {
 				<Image
 					src={googleRevievs}
 					alt='Google reviews'
-					height={45}
-					width={316}
+					height={30}
+					width={210}
 					className='lg:hidden'
 				/>
 			</div>
